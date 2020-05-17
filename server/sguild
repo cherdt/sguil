@@ -911,7 +911,7 @@ if { [info exists HTTPS] && $HTTPS } {
   if { ![file exists $HTML_PATH] } { ErrorMessage "Error: HTTP configured by HTML_PATH ($HTML_PATH) does not exist." }
   if { ![info exists HTTPS_PORT] || $HTTPS_PORT == "" } { set HTTPS_PORT 443 }
   
-  foreach p [list uri base64 fileutil::magic::mimetype websocket json json::write] {
+  foreach p [list uri base64 fileutil::magic::filetype websocket json json::write] {
     if [catch {package require $p} pVersion] {
         ErrorMessage "Error: Failed to load package $p. $p is required for HTTPS/WSS."
     }

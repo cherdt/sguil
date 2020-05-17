@@ -5,7 +5,7 @@ proc HttpDate { secs } {
 
 proc SguildGetContentType { filepath } {
 
-    set m [fileutil::magic::mimetype $filepath]
+    set m [fileutil::magic::filetype $filepath]
 
     # Fixup for weird magic detection causing file download on IE
     if { $m == "{exported SGML document text}"  } {
