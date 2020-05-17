@@ -82,8 +82,8 @@ proc CreateMysqlMainEventMergeTable {} {
         signature_id          INT UNSIGNED    NOT NULL,         \
         signature_rev         INT UNSIGNED    NOT NULL,         \
         timestamp             DATETIME        NOT NULL,         \
-        unified_event_id      INT UNSIGNED,                     \
-        unified_event_ref     INT UNSIGNED,                     \
+        unified_event_id      BIGINT UNSIGNED,                  \
+        unified_event_ref     BIGINT UNSIGNED,                  \
         unified_ref_time      DATETIME,                         \
         priority              INT UNSIGNED,                     \
         class                 VARCHAR(20),                      \
@@ -282,8 +282,8 @@ proc CreateEventTable { tableName } {
         signature_id          INT UNSIGNED    NOT NULL,         \
         signature_rev         INT UNSIGNED    NOT NULL,         \
         timestamp             DATETIME        NOT NULL,         \
-        unified_event_id      INT UNSIGNED,                     \
-        unified_event_ref     INT UNSIGNED,                     \
+        unified_event_id      BIGINT UNSIGNED,                  \
+        unified_event_ref     BIGINT UNSIGNED,                  \
         unified_ref_time      DATETIME,                         \
         priority              INT UNSIGNED,                     \
         class                 VARCHAR(20),                      \
