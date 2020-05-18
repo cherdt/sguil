@@ -190,7 +190,7 @@ proc GetDshieldIP { arg } {
         if {[file exists $BROWSER_PATH] && [file executable $BROWSER_PATH]} {
 
             # Launch browser
-	    exec $BROWSER_PATH http://www.dshield.org/ipinfo.php?ip=$ipAddr &
+	    exec $BROWSER_PATH http://www.dshield.org/ipinfo.html?ip=$ipAddr &
 
         } else {
 
